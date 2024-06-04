@@ -33,6 +33,7 @@ my_chart = new Chart(ctx,
                 {
                     label: 'Balance by Trade',
                     data: datasets_data,
+                    fill: true,
                     borderColor: '#36A2EB',
                     backgroundColor: '#9BD0F5',
                 }
@@ -73,6 +74,10 @@ my_chart = new Chart(ctx,
         }
     }
 );
+
+var gradient = ctx.createLinearGradient(0, 0, 0, 400)
+    gradient.addColorStop(0, 'rgba(229, 239, 255, 1)')
+    gradient.addColorStop(1, '#FFFFFF')
 
 Chart.defaults.backgroundColor = '#9BD0F5';
 Chart.defaults.borderColor = '#36A2EB';
